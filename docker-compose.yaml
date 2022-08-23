@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  backend:
+    image: python-reader-volume
+    ports:
+      - "80:80"
+    volumes:
+      - type: bind
+        source: ./files
+        target: /python-app/files/
+volumes:
+  files:
